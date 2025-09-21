@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #2563eb; /* Replace with your Tailwind primary */
+  --primary-rgb: 37, 99, 235; /* For opacity hover effect */
+}
+.nav-wrapper {
+  margin-top: 10px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.name {
+    color: aquamarine;
+    text-decoration: none;
+}
+
+@media (min-width: 640px) {
+  .nav-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-wrapper {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Navbar Container */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+@media (min-width: 768px) {
+  .nav-container {
+    height: 6rem;
+  }
+}
+
+/* Logo */
+.logo {
+  flex-shrink: 0;
+  margin-top: 15px;
+}
+
+.logo h2 {
+  height: 3rem;
+}
+
+@media (min-width: 768px) {
+  .logo h2 {
+    width: 16rem;
+    /* height: 4rem; */
+  }
+}
+
+/* Links Container */
+.nav-links {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+}
+
+/* Links */
+.nav-links a {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Button */
+.nav-links button {
+  border-radius: 9999px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  padding: 16px 2rem;
+  font-size: 19px;
+  background-color: var(--primary-color);
+  color: white;
+  width: 120px;
+}
+
+.nav-links button:hover {
+  background-color: rgba(var(--primary-rgb), 0.9);
+  cursor: pointer;
+}
+
+/* Hamburger */
+.hamburger {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+}
+
+
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  gap: 20px;
+}
+
+.nav-links p {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #333;
+    width: 70%;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 30px;
+
+    margin-left: 100px;
+    border-radius: 10px;
+  }
+  .nav-links.active {
+    display: flex;
+    padding: 20px;
+  }
+}

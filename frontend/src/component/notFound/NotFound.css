@@ -1,0 +1,66 @@
+.notfound-container {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: #151f279a;
+  font-family: "Arial", sans-serif;
+}
+
+.notfound-oops {
+  font-size: 9rem;
+  font-weight: 900;
+  margin: 0;
+  text-transform: uppercase;
+
+  /* Galaxy background fill */
+  background: url("https://res.cloudinary.com/dw6ux0xmu/image/upload/v1757325107/portfolia/page_not_found_background_y7ppoq.jpg");
+  background-size: cover;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 5px;
+}
+
+
+@media (max-width: 767px) {
+  .notfound-oops {
+    font-size: 3.5rem;
+  }
+}
+/* Subtitle */
+.notfound-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: #000;
+}
+
+/* Info text */
+.notfound-text {
+  font-size: 16px;
+  color: #f0d7d7;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+/* Button */
+.notfound-btn {
+  display: inline-block;
+  padding: 14px 35px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #1a73e8;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.notfound-btn:hover {
+  background: #0f5ad7;
+}
