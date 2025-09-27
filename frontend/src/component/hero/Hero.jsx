@@ -19,7 +19,7 @@ export default function Hero() {
           </p>
 
           <div className="hero-buttons">
-            <a href="https://drive.google.com/file/d/169iOAW7kCq0KDUseY-dO0mPjYwsAWyQ9/view" target="_blank" className="btn-primary">
+            <a href="https://drive.google.com/file/d/1sZGpX85SVz4sOf5FRRe1kT9E5Y5b9Ovf/view" target="_blank" className="btn-primary">
               Download Resume
             </a>
             <a href="#contact" className="btn-outline">
