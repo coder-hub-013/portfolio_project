@@ -10,6 +10,10 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
 app.post("/api/m9/c8/a9/contact", async (req, res) => {
+  console.log(req.body);
+  if (!req.body.inputData.message || req.body.inputData.message.trim() === "") {
+    return res.status(400).json({ error: "Message cannot be empty" });
+  }
 
   try {
     const transporter = nodemailer.createTransport({
