@@ -27,6 +27,9 @@ export default function Contact() {
     setLoading(true);
     console.log(inputData)
     try {
+        if (inputData.message.trim() === "") {
+           throw new Error("Message cannot be empty");
+        }  
         let response = await fetch(`/api/m9/c8/a9/contact`, {
           method: "POST",
           headers: {
