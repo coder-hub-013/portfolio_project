@@ -20,12 +20,16 @@ app.post("/api/m9/c8/a9/contact", async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       host: "smtp.gmail.com",
-      port: 2525,
+      // port: 2525,
+      port: 465,
+      secure:true,
       auth: {
         user: process.env.EMAIL_USER,
         pass:process.env.EMAIL_PASS
       },
     });
+
+    console.log("i AM triggered");
 
     await transporter.sendMail({
       from: req.body.inputData.email, 
@@ -38,7 +42,8 @@ app.post("/api/m9/c8/a9/contact", async (req, res) => {
   } catch (error) {
     console.log("I am failed");
     console.error(error);
-    res.status(500).json({ message: "Error sending message." });
+    // res.status(500).json({ message: "Error sending message." });
+    res.status(500).json({ message: "Failed to send email", error: error.message });
   }
 });
 
