@@ -14,6 +14,7 @@ app.post("/api/m9/c8/a9/contact", async (req, res) => {
   if (!req.body.inputData.message || req.body.inputData.message.trim() === "") {
     return res.status(400).json({ error: "Message cannot be empty" });
   }
+  return res.status(400).json({ error: "Work in progress" });
 
   try {
     console.log("I am started");
