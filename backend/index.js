@@ -16,6 +16,7 @@ app.post("/api/m9/c8/a9/contact", async (req, res) => {
   }
 
   try {
+    console.log("I am started");
     const transporter = nodemailer.createTransport({
       service: "gmail",
       host: "smtp.gmail.com",
@@ -32,9 +33,10 @@ app.post("/api/m9/c8/a9/contact", async (req, res) => {
       subject: `Portfolio Contact from ${req.body.inputData.name}`,
       text: `Message : ${req.body.inputData.message} \n \n from: ${req.body.inputData.email}`,
     });
-
+    console.log("i am completed");
     res.status(200).json({ message: "Message sent successfully!" });
   } catch (error) {
+    console.log("I am failed");
     console.error(error);
     res.status(500).json({ message: "Error sending message." });
   }
