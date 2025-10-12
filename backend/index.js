@@ -87,7 +87,7 @@ app.post('/api/m9/c8/a9/contact', async (req, res) => {
       html,
     });
 
-    console.log('Resend result:', result);
+    console.log('Resend result:---------------->I am result--->', result);
     return res.status(200).json({ success: true, message: 'Email sent' });
   } catch (err) {
     console.error('Send email error:', err);
